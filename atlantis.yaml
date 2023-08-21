@@ -6,3 +6,12 @@ projects:
   name: no_cust
 - dir: with_cust
   name: with_cust
+  workflow: production
+
+workflows:
+   production:
+    plan:
+      steps:
+      - init
+      - plan:
+          extra_args: ["-var-file", "production.tfvars"]
