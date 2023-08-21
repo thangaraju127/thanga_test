@@ -1,6 +1,6 @@
 version: 3
 
-# repos::
+# repos:
 #   - id: /.*/
 #     branch: /.*/
 #     workflow: default
@@ -21,6 +21,10 @@ workflows:
    production:
     plan:
       steps:
+      - run: |
+          echo "generating backend.tf"
+        # shell: bash
+        # shellArgs: copy_backend.tf
       - init
       - plan:
           extra_args: ["-var-file", "production.tfvars"]
