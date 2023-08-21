@@ -1,4 +1,13 @@
 version: 3
+
+# repos:
+#   - id: /.*/
+#     branch: /.*/
+#     workflow: default
+#     pre_workflow_hooks:
+#       - run: |
+#         echo "onnum illa" > /tmp/somefile.txt
+
 projects:
 - dir: .
   name: main_dir
@@ -12,6 +21,10 @@ workflows:
    production:
     plan:
       steps:
+      - run: |
+          echo "generating backend.tf"
+        # shell: bash
+        # shellArgs: copy_backend.tf
       - init
       - plan:
           extra_args: ["-var-file", "production.tfvars"]
