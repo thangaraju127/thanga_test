@@ -4,11 +4,9 @@ projects:
   name: main_dir
 - dir: no_cust
   name: no_cust
-  workflow: dev
   
 - dir: with_cust
   name: with_cust
-  workflow: dev
 
 workflows:
    dev:
