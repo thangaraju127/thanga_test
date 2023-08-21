@@ -13,7 +13,7 @@ workflows:
     plan:
       steps:
       - run: |
-          bash ../copy_backend.sh 
+          bash ../create_backend.sh 
           shell: bash
           shellArgs: dev us-east-1 with_cust
       - init
