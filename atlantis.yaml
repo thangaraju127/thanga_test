@@ -1,12 +1,12 @@
 version: 3
 
-# repos:
-#   - id: /.*/
-#     branch: /.*/
-#     workflow: default
-#     pre_workflow_hooks:
-#       - run: |
-#         echo "onnum illa" > /tmp/somefile.txt
+repos:
+  - id: /.*/
+    branch: /.*/
+    workflow: default
+    pre_workflow_hooks:
+      - run: |
+        echo "onnum illa" > /tmp/somefile.txt
 
 projects:
 - dir: .
