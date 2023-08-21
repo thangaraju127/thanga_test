@@ -1,0 +1,4 @@
+environment=dev
+aws_region='us-east-1'
+access_key=AKIAYPDDECEY7FFOBA46
+secret_key=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
