@@ -22,7 +22,7 @@ workflows:
     plan:
       steps:
       - run: |
-          echo "generating backend.tf"
+          echo "generating backend.tf" >/tmp/test.txt
         # shell: bash
         # shellArgs: copy_backend.tf
       - init
