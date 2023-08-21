@@ -1,6 +1,6 @@
 version: 3
 
-# repos:
+# repos::
 #   - id: /.*/
 #     branch: /.*/
 #     workflow: default
