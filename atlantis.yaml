@@ -13,9 +13,7 @@ workflows:
     plan:
       steps:
       - run: |
-          bash ../create_backend.sh 
-          shell: bash
-          shellArgs: dev us-east-1 with_cust
+          bash ../create_backend.sh dev us-east-1 with_cust
       - init
       - plan:
           extra_args: ["-var-file", "production.tfvars"]
