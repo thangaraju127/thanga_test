@@ -4,15 +4,16 @@ projects:
   name: main_dir
 - dir: no_cust
   name: no_cust
+  workflow: dev
 - dir: with_cust
   name: with_cust
-  workflow: production
+  workflow: dev
 
 workflows:
-   production:
+   dev:
     plan:
       steps:
       - run: |
-          bash ../create_backend.sh dev us-east-1 ./
+          bash ../create_backend.sh ./
       - init
       - plan
