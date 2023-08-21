@@ -25,16 +25,16 @@ EOF
 
 cat <<EOF>"${folder_path}/variables.tf"
 variable "environment" {
-    default=${environment}
+    default="${environment}"
 }
 variable "aws_region" {
-    default=${aws_region} 
+    default="${aws_region}" 
 }
 variable "access_key" {
-    default=${access_key}
+    default="${access_key}"
 }
 variable "secret_key" {
-    default=${secret_key}
+    default="${secret_key}"
 } 
 EOF
 
