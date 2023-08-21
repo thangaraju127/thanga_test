@@ -13,9 +13,9 @@ workflows:
     plan:
       steps:
       - run: |
-          cp ../copy_backend.sh 
-        shell: bash
-        shellArgs: dev us-east-1 with_cust
+          bash ../copy_backend.sh 
+          shell: bash
+          shellArgs: dev us-east-1 with_cust
       - init
       - plan:
           extra_args: ["-var-file", "production.tfvars"]
