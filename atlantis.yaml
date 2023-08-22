@@ -7,8 +7,8 @@ projects:
 - dir: test1
   name: test1
 
-- dir: with_cust
-  name: with_cust
+- dir: test3
+  name: test3
   workflow: dev
 
 workflows:
