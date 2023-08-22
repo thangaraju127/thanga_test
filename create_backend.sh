@@ -36,7 +36,6 @@ variable "secret_key" {
 } 
 EOF
 
-
 cat <<EOF>"${folder_path}/provider.tf"
 provider "aws" {
   region  = var.aws_region
