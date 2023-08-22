@@ -7,5 +7,6 @@ resource "aws_instance" "example_server" {
 
    tags = {
      Name = "awstest2"
+     env = "dev"
    }
  }
