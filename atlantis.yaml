@@ -6,7 +6,8 @@ projects:
   name: test
 - dir: test1
   name: test1
-
+  workflow: dev
+  
 - dir: test3
   name: test3
   workflow: dev
