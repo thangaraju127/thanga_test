@@ -9,9 +9,11 @@ base_dir=$(cd $(dirname $0) && pwd)
 source ${base_dir}/dev_shell.sh
 
 cat <<EOF>"${folder_path}/backend.tf"
-data "terraform_remote_state" "${folder_name}" {
-  backend="s3" 
-  config = {
+#data "terraform_remote_state" "${folder_name}" {
+#  backend="s3" 
+#  config = {
+  terraform {
+    backend "s3" {
     bucket = "testdev1"
     key = "backend/folder1/${environment}/${folder_name}.tfsate"
     region = "${aws_region}"
