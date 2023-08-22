@@ -8,8 +8,6 @@ base_dir=$(cd $(dirname $0) && pwd)
 # dos2unix ${base_dir}/dev_shell.sh 
 source ${base_dir}/dev_shell.sh
 
-
-
 cat <<EOF>"${folder_path}/backend.tf"
 data "terraform_remote_state" "${folder_name}" {
   backend="s3" 
@@ -21,7 +19,6 @@ data "terraform_remote_state" "${folder_name}" {
   }
 } 
 EOF
-
 
 cat <<EOF>"${folder_path}/variables.tf"
 variable "environment" {
@@ -39,14 +36,11 @@ variable "secret_key" {
 EOF
 
 
-
 cat <<EOF>"${folder_path}/provider.tf"
 provider "aws" {
   region  = var.aws_region
-
   access_key = var.access_key
   secret_key = var.secret_key
 }
- 
 EOF
 
