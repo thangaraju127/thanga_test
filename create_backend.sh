@@ -17,7 +17,6 @@ cat <<EOF>"${folder_path}/backend.tf"
     bucket = "testdev1"
     key = "backend/folder1/${environment}/${folder_name}.tfsate"
     region = "${aws_region}"
-    
   }
 } 
 EOF
