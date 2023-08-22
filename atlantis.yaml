@@ -2,9 +2,11 @@ version: 3
 projects:
 - dir: .
   name: main_dir
-- dir: no_cust
-  name: no_cust
-  
+- dir: test
+  name: test
+- dir: test1
+  name: test1
+
 - dir: with_cust
   name: with_cust
   workflow: dev
