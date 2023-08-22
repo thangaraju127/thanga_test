@@ -9,6 +9,10 @@ base_dir=$(cd $(dirname $0) && pwd)
 source ${base_dir}/dev_shell.sh
 
 cat <<EOF>"${folder_path}/backend.tf"
+terraform {
+  backend "s3" {
+  }
+}
 data "terraform_remote_state" "${folder_name}" {
   backend="s3" 
   config = {
