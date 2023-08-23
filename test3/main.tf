@@ -6,5 +6,6 @@ versioning {
    }
 tags = {
      Name = "Bucket1"
+     env= "dev"
       }
 }
