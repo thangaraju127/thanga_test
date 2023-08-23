@@ -4,7 +4,6 @@ script_path=$(dirname $0)
 env=$1
 aws_region=$2
 
-
 while read i; do
     i=$(dirname "${i}")
     echo "Copy ${org_bck} to ${i}"
