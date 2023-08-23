@@ -1,11 +1,11 @@
-resource "null_resource" example {
+resource "aws_s3_bucket" "demo1" {
+    bucket = "test2-demo1" 
+    acl = "private"  
+versioning {
+      enabled = false
+   }
+tags = {
+     Name = "Bucket2"
+     env= "stg"
+      }
 }
-
-# resource "aws_instance" "example_server" {
-#   ami           = "ami-04e914639d0cca79a"
-#   instance_type = "t2.micro"
-
-#   tags = {
-#     Name = "awstest2"
-#   }
-# }

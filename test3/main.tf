@@ -4,4 +4,8 @@ resource "aws_s3_bucket" "demos3" {
 versioning {
       enabled = false
    }
+tags = {
+     Name = "Bucket1"
+     env= "dev"
+      }
 }
