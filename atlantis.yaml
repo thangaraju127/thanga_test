@@ -1,22 +1,22 @@
-version: 3
-projects:
-- dir: .
-  name: main_dir
-- dir: test
-  name: test
-- dir: test1
-  name: test1
-  workflow: dev
+# version: 3
+# projects:
+# - dir: .
+#   name: main_dir
+# - dir: test
+#   name: test
+# - dir: test1
+#   name: test1
+#   workflow: dev
   
-- dir: test3
-  name: test3
-  workflow: dev
+# - dir: test3
+#   name: test3
+#   workflow: dev
 
-workflows:
-   dev:
-    plan:
-      steps:
-      - run: |
-          bash ../create_backend.sh ./
-      - init
-      - plan
+# workflows:
+#    dev:
+#     plan:
+#       steps:
+#       - run: |
+#           bash ../create_backend.sh ./
+#       - init
+#       - plan
